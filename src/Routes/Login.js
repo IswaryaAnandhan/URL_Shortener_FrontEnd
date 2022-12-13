@@ -85,7 +85,7 @@ function Login() {
                      
                     </div>
                     <p className="form-label">
-                 <Link to="/resetpassword" className='text-light'> Forget Password?</Link>
+                 <Link to="/resetpassword" className='text'> Forget Password?</Link>
                </p>
 
                     <button
