@@ -11,18 +11,24 @@ function Card(props) {
   };
 
   return (
-   <div className="col-lg-6 col-md-6 col-sm-8 mx-auto pt-5">
-     <div class="card bg-transparent border-info">
-      <div class="card-header fw-bold fs-5 text-warning text-center">URL SHORTENER APP</div>
-      <div class="card-body text-center">
-        <h5 class="card-title fw-bold">Total URL Created : {props.info.length}</h5>
-        <p class="card-text fw-bold">Total number of clicks: {clickCount()} </p>
-        <Link to={'/enterurl'} className="btn btn-outline-dark text fw-bold">
-          View/Add your URL's
-        </Link>
+    <div className="col-lg-6 col-md-6 col-sm-8 mx-auto pt-5">
+      <div class="card bg-transparent border-info">
+        <div class="card-header fw-bold fs-5 text-primary text-center">
+          Your URL Shorteners
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold">
+            Total URL Created : {props.info.length}
+          </h5>
+          <p class="card-text fw-bold">
+            Total number of clicks: {clickCount()}{" "}
+          </p>
+          <Link to={"/enterurl"} className="btn btn-outline-dark text fw-bold">
+            View/Add your URL's
+          </Link>
+        </div>
       </div>
     </div>
-   </div>
   );
 }
 

@@ -30,7 +30,7 @@ function Passwordreset() {
                 name="email"
                 onChange={formik.handleChange}
                 value={formik.values.email}
-                placeholder='Please enter valid email address to confirm'
+                placeholder="Please enter valid email address to confirm"
               />
             </div>
 

@@ -26,3 +26,12 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: #002147; 
 }
+
+/* Handle on validation */
+.error-box{
+  border: 1px solid red !important;
+}
+
+.success-box{
+  border: 1px solid green !important;
+}
