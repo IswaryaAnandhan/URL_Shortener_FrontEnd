@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Topbar() {
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-blue ">
+      <nav class="navbar navbar-expand-lg bg-primary ">
         <div class="container-fluid">
           <a class="navbar-brand text-light mx-2 fw-bold" href="#">
             URL SHORTNER APP
