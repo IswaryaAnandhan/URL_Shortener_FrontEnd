@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function Card(props) {
   let clickCount = () => {
     let sum = 0;
-    props.info.forEach((element) => {
-      sum += element.count;
+    props.info.forEach((ele) => {
+      sum += ele.count;
     });
     return sum;
   };
