@@ -37,7 +37,7 @@ function ResetPasswordPage() {
                     for="exampleInputEmail1"
                     class="form-label fw-bold fs-4"
                   >
-                    Enter Random String
+                    Enter Security code
                   </label>
                   <input
                     type="text"
