@@ -136,7 +136,7 @@ function Login() {
                       </p>
                     </div>
                     <div className="p-2 bg-secondary border-light text-light rounded">
-                   <h4 className="text-center">Login_Credential</h4>
+                   <h4 className="text-center">User_Credential</h4>
                    <hr/>
                   <h5 className="text-center">Username: user</h5>
                   <h5 className="text-center">Password: user1234</h5>
