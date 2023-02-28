@@ -126,7 +126,7 @@ function Login() {
                       </button>
                     </form>
 
-                    <div className="text-center fw-bold mt-2 pt-2 pb-4">
+                    <div className="text-center fw-bold mt-2 pt-2 pb-1">
                       <p>
                         Don't have an Account ?
                         <Link to={"/register"} className="text">
@@ -134,6 +134,12 @@ function Login() {
                           Register
                         </Link>
                       </p>
+                    </div>
+                    <div className="p-2 bg-secondary border-light text-light rounded">
+                   <h4 className="text-center">Login_Credential</h4>
+                   <hr/>
+                  <h5 className="text-center">Username: user</h5>
+                  <h5 className="text-center">Password: user1234</h5>
                     </div>
                   </div>
                 </div>
