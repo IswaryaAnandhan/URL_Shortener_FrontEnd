@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Loading from "../Components/Loading";
 import { config } from "../config";
 
 function Login() {
   let navigate = useNavigate();
+  const [isLoading, setLoading] = useState(false);
   let formik = useFormik({
     initialValues: {
       username: "",
@@ -23,7 +25,7 @@ function Login() {
     },
     onSubmit: async (values) => {
       try {
-        console.log(values);
+        setLoading(true);
         const user = await axios.post(`${config.api}`, values);
         localStorage.setItem("login_credential", user.data.token);
         alert(user.data.message);
@@ -39,6 +41,7 @@ function Login() {
         } else {
           alert("User not found");
         }
+        setLoading(true);
       } catch (error) {
         console.log(error);
       }
@@ -59,7 +62,7 @@ function Login() {
                         Welcome To Login Page!
                       </h4>
                     </div>
-
+                   {isLoading? <Loading/>:""}
                     <form className="user" onSubmit={formik.handleSubmit}>
                       <div className="form-group pb-3">
                         <input

@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { config } from "../config";
+import Loading from "../Components/Loading";
 
 function Register() {
   let navigate = useNavigate();
+  const [isLoading, setLoading] = useState(false);
   let formik = useFormik({
     initialValues: {
       username: "",
@@ -36,11 +38,12 @@ function Register() {
       return errors;
     },
     onSubmit: async (values) => {
-      console.log(values);
       try {
+        setLoading(true);
         const register = await axios.post(`${config.api}/register`, values);
         alert(register.data.message);
         navigate("/");
+        setLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -60,7 +63,7 @@ function Register() {
                        Welcome to Register Page
                       </h4>
                     </div>
-
+                    {isLoading? <Loading/>:""}
                     <form className="user" onSubmit={formik.handleSubmit}>
                       <div className="form-group pb-3">
                         <input
